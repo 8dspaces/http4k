@@ -24,7 +24,7 @@ import java.math.BigDecimal
 import java.math.BigInteger
 import kotlin.reflect.KClass
 
-open class ConfigurableGson(builder: GsonBuilder) : JsonLibAutoMarshallingJson<JsonElement>() {
+open class ConfigurableGson(builder: GsonBuilder) : AutoMarshallingJson<JsonElement>() {
 
     val mapper: Gson = builder.create()
     private val pretty = builder.setPrettyPrinting().create()

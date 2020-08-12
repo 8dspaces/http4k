@@ -18,7 +18,7 @@ import java.math.BigDecimal
 import java.math.BigInteger
 import kotlin.reflect.KClass
 
-open class ConfigurableMoshi(builder: Moshi.Builder) : AutoMarshallingJson() {
+open class ConfigurableMoshi(builder: Moshi.Builder) : AutoMarshalling() {
 
     private val moshi: Moshi = builder.build()
 
