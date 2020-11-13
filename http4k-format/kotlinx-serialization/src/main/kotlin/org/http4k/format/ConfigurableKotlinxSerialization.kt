@@ -22,9 +22,7 @@ import kotlin.jvm.internal.Reflection
 import kotlin.reflect.KClass
 import kotlinx.serialization.json.Json as KotlinxJson
 
-open class ConfigurableKotlinxSerialization(
-    json: JsonBuilder.() -> Unit,
-) : JsonLibAutoMarshallingJson<JsonElement>() {
+open class ConfigurableKotlinxSerialization(json: JsonBuilder.() -> Unit) : AutoMarshallingJson<JsonElement>() {
     val json = KotlinxJson { json() }
     private val prettyJson =
         KotlinxJson {
